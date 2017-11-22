@@ -24,6 +24,33 @@
 
     <br><br>
 
+    Country:
+
+   <form:select path="country">
+
+        <form:option value="Brazil" label="Brazil"/>
+        <form:option value="France" label="France"/>
+        <form:option value="Germany" label="Germany"/>
+        <form:option value="Poland" label="Poland"/>
+
+    </form:select>
+
+    <br><br>
+
+    Short Code:
+
+    <form:select path="country2">
+
+        <form:options items="${student.countryOptions}"/>
+
+    </form:select>
+
+    <br><br>
+
+    <form:select path="countryFile">
+        <form:options items="${theCountryOptionsFile}" />
+    </form:select>
+
     <input type="submit" value="save the student">
 
 </form:form>

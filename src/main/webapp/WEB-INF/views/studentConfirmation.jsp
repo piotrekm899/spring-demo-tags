@@ -16,6 +16,14 @@ The Student has been enrolled: ${student.firstName} ${student.lastName}
 
 <br><br>
 
+Country: ${student.country}
+
+<br><br>
+
+Short Code: ${student.country2}
+<br><br>
+
+
 <a href="/student/showForm">go back to the form</a>
 
 </body>
