@@ -51,6 +51,24 @@
         <form:options items="${theCountryOptionsFile}" />
     </form:select>
 
+    <br><br>
+
+    Favourite programming language:
+
+    Java <form:radiobutton path="favoutiteLanguage" value="Java"/>
+    C# <form:radiobutton path="favoutiteLanguage" value="C#"/>
+    PHP <form:radiobutton path="favoutiteLanguage" value="PHP"/>
+    Ruby <form:radiobutton path="favoutiteLanguage" value="Ruby"/>
+
+    <br><br>
+
+    Operating Systems: <br>
+    Linux <form:checkbox path="operatingSystem" value="Linux"/>
+    Mac OS <form:checkbox path="operatingSystem" value="Mac OS"/>
+    MS Windows <form:checkbox path="operatingSystem" value="MS Windows"/>
+
+    <br>
+
     <input type="submit" value="save the student">
 
 </form:form>

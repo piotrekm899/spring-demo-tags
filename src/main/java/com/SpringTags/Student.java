@@ -10,7 +10,11 @@ public class Student {
     private String country2;
     private String countryFile;
 
+    private String favoutiteLanguage;
+
     private LinkedHashMap<String, String> countryOptions;
+
+    private String[] operatingSystem;
 
     public Student() {
 
@@ -21,6 +25,14 @@ public class Student {
         countryOptions.put("France", "FRA");
         countryOptions.put("Poland", "POL");
 
+    }
+
+    public String getFavoutiteLanguage() {
+        return favoutiteLanguage;
+    }
+
+    public void setFavoutiteLanguage(String favoutiteLanguage) {
+        this.favoutiteLanguage = favoutiteLanguage;
     }
 
     public String getCountry() {
@@ -63,9 +75,19 @@ public class Student {
         this.lastName = lastName;
     }
 
+
+    public String[] getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(String[] operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }
+
     public LinkedHashMap<String, String> getCountryOptions() {
         return countryOptions;
     }
+
 
 
 }

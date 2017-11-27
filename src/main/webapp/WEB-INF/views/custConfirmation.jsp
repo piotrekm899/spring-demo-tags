@@ -1,24 +1,20 @@
 <%--
   Created by IntelliJ IDEA.
   User: piotr
-  Date: 21.11.2017
-  Time: 21:25
+  Date: 27.11.2017
+  Time: 14:16
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
-    <title>HOMEPAGE</title>
+    <title>Customer Confirmation</title>
 </head>
-
 <body>
 
-Welcome to my page!
-
-<hr><a href="/student/showForm"> Go to enrollment </a>
-
-<hr><a href="/customer/showForm"> Go to Student Form </a>
+You have successfully logged in! ${customer.firstName} ${customer.lastName}
 
 </body>
-
 </html>
