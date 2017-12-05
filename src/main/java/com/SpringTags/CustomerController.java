@@ -28,7 +28,7 @@ public class CustomerController {
         if (theBindingResult.hasErrors()) {
             return "customerForm";
         } else {
-            return "customerForm";
+            return "custConfirmation";
         }
     }
 }
