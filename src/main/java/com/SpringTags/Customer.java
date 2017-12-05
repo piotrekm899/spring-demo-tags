@@ -1,5 +1,7 @@
 package com.SpringTags;
 
+import com.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -17,6 +19,10 @@ public class Customer {
 
     @Pattern(regexp = "\\d{2}-\\d{3}", message="please enter the correct postal code in the format XX-XXX")
     private String postalCode;
+
+    @CourseCode
+    private String courseCode;
+
 
     public String getFirstName() {
         return firstName;
@@ -49,4 +55,14 @@ public class Customer {
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
+    }
 }
+
+

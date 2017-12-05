@@ -1,8 +1,11 @@
 package com.SpringTags;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,6 +22,11 @@ public class CustomerController {
         theModel.addAttribute("customer", new Customer());
 
         return "customerForm";
+    }
+
+    @InitBinder /* Converts empty strings into null when a form is submitted */
+    public void initBinder(WebDataBinder binder) {
+        binder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
     }
 
     @RequestMapping("/processForm")
